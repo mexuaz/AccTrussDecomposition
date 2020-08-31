@@ -11,17 +11,14 @@ CMAKEOPT="-DBUILD_SERIAL=ON -DPLAYGROUND=OFF -DLEGACY_PKT_ALL=ON"
 cd $HOME
 
 if [[ -d "$MAINDIR" ]]; then
-
 	echo ">>> Syncing repository ..."
 	cd "$MAINDIR"
 	git reset --hard
 	git pull
-    
+	cd ..
 else
-	
 	echo ">>> Cloning repository ..."
 	git clone git@github.com:mexuaz/$MAINDIR
-
 fi
 echo "<<<"
 
@@ -43,17 +40,14 @@ module list
 echo "<<<"
 
 echo ">>> Building all projects ..."
+
 for PRG in ${ALLAPPS[*]}; do
-  
   echo ">> Building $PRG"
   mkdir "$PRG"
   cd "$PRG"
-  
   cmake "$HOME/$MAINDIR/$PRG" "$CMAKEOPT"
   make -j
-  
   echo "<<"
-  
 done
 
 echo "<<<"
