@@ -35,7 +35,7 @@ echo "<<<"
 
 echo ">>> Reloading ComputeCanada essential modules ..."
 module --force purge
-module load gcc/9.1.0 tbb/2018_U5 cmake/3.12.3 boost/1.68.0 openmpi/4.0.1
+module load nixpkgs gcc/9.1.0 tbb/2018_U5 cmake/3.12.3 boost/1.68.0 openmpi/4.0.1
 module list
 echo "<<<"
 
