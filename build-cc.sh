@@ -2,7 +2,8 @@
 
 MAINDIR="AccTrussDecomposition"
 
-ALLAPPS=("opt-truss-decomp" "opt-truss-decomp-offload" "opt-offload-large-data" "opt-cpu-large-data" "opt-cpu-large-data" "msp" "h-idx")
+ALLAPPS=("opt-truss-decomp" "opt-offload-large-data" "opt-cpu-large-data" "opt-cpu-large-data" "msp")
+#ALLAPPS+=( "opt-truss-decomp-offload"  "h-idx")
 
 BUILDDIR="build-acc"
 
