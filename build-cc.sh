@@ -41,7 +41,7 @@ echo "<<< New build directory."
 
 echo ">>> Reloading ComputeCanada essential modules ..."
 module --force purge
-module load nixpkgs gcc/8.3.0 cuda/10.1 cudnn/7.6.5 tbb/2018_U5 cmake/3.16.3 python/3.8.2 boost/1.68.0 openmpi/4.0.1
+module load nixpkgs gcc/7.3.0 cuda/9.2 tbb/2018_U5 cmake/3.16.3 python/3.8.2 boost/1.68.0 openmpi/3.1.4
 module list
 echo "<<< Essential Modules."
 
